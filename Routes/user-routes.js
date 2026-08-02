@@ -38,7 +38,7 @@ const { home , login , dashboard } = require("../controllers/userController");
 // now we can use the controller functions in our routes
 
 router.get("/", home);
-router.get("/login", login)
+router.post("/login", login)
 router.get("/dashboard", dashboard);
 
 // Those controller functions will handle the logic for each route,

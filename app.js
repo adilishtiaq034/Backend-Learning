@@ -232,6 +232,24 @@ app.use('/users',userRoutes) // "For any request that starts with /users, use th
                              // In app we will create only one route /users and in user-routes.js 
                              // we will create all the routes related to users like /users/login, 
                              // /users/register, /users/profile etc.
+// ---------------------------------------------------------------------------
+
+// Learning Controllers in express
+
+// Controllers are functions that handle the logic for a specific route.
+// They are usually defined in a separate file and imported into the route file.
+// This helps to keep the code organized and maintainable.
+
+
+
+
+
+
+
+
+
+
+
 app.listen(port,()=>{
     console.log(`Server is running on port ${port}`)
 })

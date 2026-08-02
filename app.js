@@ -224,9 +224,14 @@ app.use(express.json())  // middleware to parse JSON data in request body & it r
                  // app.use() is mainly used to register middleware in Express.
                  // Like   app.use(express.json()) and app.use(logger)
 
+//         Day 3
+//  learning routing in express
 
-
-
+const userRoutes = require('./Routes/user-routes')
+app.use('/users',userRoutes) // "For any request that starts with /users, use the routes inside userRoutes.
+                             // In app we will create only one route /users and in user-routes.js 
+                             // we will create all the routes related to users like /users/login, 
+                             // /users/register, /users/profile etc.
 app.listen(port,()=>{
     console.log(`Server is running on port ${port}`)
 })

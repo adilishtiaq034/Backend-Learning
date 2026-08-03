@@ -227,11 +227,13 @@ app.use(express.json())  // middleware to parse JSON data in request body & it r
 //         Day 3
 //  learning routing in express
 
-const userRoutes = require(' ./Routes/user-routes ')
-app.use('/users',userRoutes) // "For any request that starts with /users, use the routes inside userRoutes.
-                             // In app we will create only one route /users and in user-routes.js 
-                             // we will create all the routes related to users like /users/login, 
-                             // /users/register, /users/profile etc.
+// const userRoutes = require(' ./Routes/user-routes ')
+// app.use('/users',userRoutes)
+
+ // The upper code means For any request that starts with /users, use the routes inside userRoutes.
+// In app we will create only one route /users and in user-routes.js 
+ // we will create all the routes related to users like /users/login, 
+// /users/register, /users/profile etc.
 // ---------------------------------------------------------------------------
 
 // Learning Controllers in express
@@ -253,12 +255,31 @@ app.use('/users',userRoutes) // "For any request that starts with /users, use th
 // View: Represents the user interface of the application. ( Display in React)
 // Controller: Handles the logic for a specific route and interacts with the model and view. (Controllers in Express)
 
+//-------------------------------------------------------------
+// Error Handling in Express
 
+app.get("/profile", (req, res) => {
 
+    try {
 
+        let user = undefined;
 
+        console.log(user.name);
 
+        res.json({
+            message: "Profile"
+        });
 
+    }
+    catch(error){
+
+        res.status(500).json({
+            message: "Something went wrong"
+        });
+
+    }
+
+});
 
 
 app.listen(port,()=>{

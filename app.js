@@ -258,28 +258,63 @@ app.use(express.json())  // middleware to parse JSON data in request body & it r
 //-------------------------------------------------------------
 // Error Handling in Express
 
-app.get("/profile", (req, res) => {
+// app.get("/profile", (req, res) => {
 
-    try {
+//     try {
 
-        let user = undefined;
+//         let user = undefined;
 
-        console.log(user.name);
+//         console.log(user.name);
 
-        res.json({
-            message: "Profile"
-        });
+//         res.json({
+//             message: "Profile"
+//         });
 
-    }
-    catch(error){
+//     }
+//     catch(error){
 
-        res.status(500).json({
-            message: "Something went wrong"
-        });
+//         res.status(500).json({
+//             message: "Something went wrong"
+//         });
 
-    }
+//     }
 
-});
+// });
+
+//-------------------------------------------------------------------
+
+// Learning Environment Variables in Express --> .env
+
+// Environment variables are used to store sensitive information like database credentials, API keys, etc.
+// We can use the dotenv package to load environment variables from a .env file into process.env.
+// To use dotenv, we need to install it first using npm install dotenv
+// Then we need to require it at the top of our app.js file using require('dotenv').config()
+// Now we can access the environment variables using process.env.VARIABLE_NAME
+
+// suppose we have a .env file with the following content:
+// PORT=3000
+// DB_URL=mongodb://localhost:27017/mydb --> for database connection
+// API_KEY=your_api_key -- > for api keys 
+
+// so to access the PORT variable in our app.js file, we can use process.env.PORT
+// process.env will remain the same we just have to put variable name after it like process.env.PORT, process.env.DB_URL, process.env.API_KEY etc.
+
+// require("dotenv").config();
+
+// const express = require("express");
+// const app = express();
+
+// app.listen(process.env.PORT, () => {
+//     console.log("Server Running");
+// });
+
+
+
+
+
+
+
+
 
 
 app.listen(port,()=>{

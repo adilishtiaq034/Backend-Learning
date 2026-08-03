@@ -8,20 +8,20 @@
 function home(req, res) {
 
     res.json({
-        message: "Home"
+        message: "Home Page"
     });
 
 }
 
 function login(req, res) {
     res.json({
-        message: "Login"
+        message: "Login Page"
     });
 }
 
 function dashboard(req, res) {
     res.json({
-        message: "Dashboard"
+        message: "Dashboard Page"
     });
 }
 

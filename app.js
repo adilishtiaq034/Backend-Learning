@@ -227,7 +227,7 @@ app.use(express.json())  // middleware to parse JSON data in request body & it r
 //         Day 3
 //  learning routing in express
 
-const userRoutes = require('./Routes/user-routes')
+const userRoutes = require(' ./Routes/user-routes ')
 app.use('/users',userRoutes) // "For any request that starts with /users, use the routes inside userRoutes.
                              // In app we will create only one route /users and in user-routes.js 
                              // we will create all the routes related to users like /users/login, 
@@ -240,7 +240,18 @@ app.use('/users',userRoutes) // "For any request that starts with /users, use th
 // They are usually defined in a separate file and imported into the route file.
 // This helps to keep the code organized and maintainable.
 
+//------------------------------------------------------
 
+//       Day 4
+
+// Learning MVC (Model-View-Controller) architecture in express
+
+// Main purpose of MC is to organize and stucture everything in a proper way 
+// so that it is easy to maintain and scale the application.
+// MVC is a design pattern that separates the application into three main components:
+// Model: Represents the data and business logic of the application. (Database in MongoDB)
+// View: Represents the user interface of the application. ( Display in React)
+// Controller: Handles the logic for a specific route and interacts with the model and view. (Controllers in Express)
 
 
 

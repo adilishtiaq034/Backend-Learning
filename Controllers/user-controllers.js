@@ -21,7 +21,7 @@ function login(req, res) {
 
 function dashboard(req, res) {
     res.json({
-        message: "Dashboard Page"
+        message: "Dashboard"
     });
 }
 
